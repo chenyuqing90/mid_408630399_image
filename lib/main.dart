@@ -1,7 +1,26 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  var appTitle = Text('我的第一個Flutter App'),
+      hiFlutter = Text(
+        'hi, Flutter.',
+        style: TextStyle(fontSize: 50),);
+
+  var appBody = Center(child: hiFlutter,);
+
+  var appBar = AppBar(
+    title: appTitle,
+    backgroundColor: Color(0xff0000ff),
+  );
+
+  var app = MaterialApp(
+    home: Scaffold(
+      appBar: appBar,
+      body: appBody,
+    ),
+  );
+
+  runApp(app);
 }
 
 class MyApp extends StatelessWidget {
