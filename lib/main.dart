@@ -1,22 +1,72 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  var appTitle = Text('我的第一個Flutter App'),
+  var appTitle = Text('Flutter App',),
       hiFlutter = Text(
-        'hi, Flutter.',
-        style: TextStyle(fontSize: 50),);
+        'hi,Flutter.\n今日作業0926',
+        style: TextStyle(fontSize: 30,
+            decoration: TextDecoration.underline,
+            color:Colors.yellowAccent,
+            fontWeight: FontWeight.bold),
+        textAlign: TextAlign.justify,
+      );
 
-  var appBody = Center(child: hiFlutter,);
+  var img1 = Image.asset('assets/派欸.jpg');
+  var img2 = Image.asset('assets/今天很嗆是吧.jpg');
+  var img3 = Image.asset('assets/尖頭給我納命來.jpg');
+  var img4 = Image.asset('assets/我要去檢舉你.jpg');
+  var img5 = Image.asset('assets/芝麻開門.jpg');
+  var img6 = Image.asset('assets/你為什不問問神奇海螺.jpg');
+  var appBody = GridView.count(
+    primary: false,
+    padding: const EdgeInsets.all(20),
+    crossAxisSpacing: 10,
+    mainAxisSpacing: 10,
+    crossAxisCount: 2,
+    children: <Widget>[
+      Container(
+        padding: const EdgeInsets.all(8),
+        color: Colors.white,
+        child: img1,
+      ),
+      Container(
+        padding: const EdgeInsets.all(8),
+        color: Colors.blueAccent,
+        child: img3,
+      ),
+      Container(
+        padding: const EdgeInsets.all(8),
+        color: Colors.teal[300],
+        child: img2,
+      ),
+      Container(
+        padding: const EdgeInsets.all(8),
+        color: Colors.brown,
+        child: img4,
+      ),
+      Container(
+        padding: const EdgeInsets.all(8),
+        color: Colors.purpleAccent,
+        child: img5,
+      ),
+      Container(
+        padding: const EdgeInsets.all(8),
+        color: Colors.greenAccent,
+        child: img6,
+      ),
+    ],
+  );
 
   var appBar = AppBar(
     title: appTitle,
-    backgroundColor: Color(0xff0000ff),
+    backgroundColor: Colors.deepPurple,
   );
 
   var app = MaterialApp(
     home: Scaffold(
       appBar: appBar,
       body: appBody,
+      backgroundColor: Colors.yellowAccent,
     ),
   );
 
