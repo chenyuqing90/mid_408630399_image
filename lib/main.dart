@@ -17,6 +17,7 @@ void main() {
   var img4 = Image.asset('assets/我要去檢舉你.jpg');
   var img5 = Image.asset('assets/芝麻開門.jpg');
   var img6 = Image.asset('assets/你為什不問問神奇海螺.jpg');
+
   var appBody = GridView.count(
     primary: false,
     padding: const EdgeInsets.all(20),
@@ -25,34 +26,130 @@ void main() {
     crossAxisCount: 2,
     children: <Widget>[
       Container(
-        padding: const EdgeInsets.all(8),
-        color: Colors.white,
-        child: img1,
+        child: ElevatedButton(
+          onPressed: () {
+            final snackBar = SnackBar(
+              content: const Text('派欸'),
+              action: SnackBarAction(
+                label: 'Undo',
+                onPressed: () {
+                  Text('派欸');
+                  // Some code to undo the change.
+                },
+              ),
+            );
+
+            // Find the ScaffoldMessenger in the widget tree
+            // and use it to show a SnackBar.
+
+          },
+          child: img1,
+        ),
       ),
       Container(
-        padding: const EdgeInsets.all(8),
-        color: Colors.blueAccent,
-        child: img3,
+        child: ElevatedButton(
+          onPressed: () {
+            final snackBar = SnackBar(
+              content: const Text('派欸'),
+              action: SnackBarAction(
+                label: 'Undo',
+                onPressed: () {
+                  Text('派欸');
+                  // Some code to undo the change.
+                },
+              ),
+            );
+
+            // Find the ScaffoldMessenger in the widget tree
+            // and use it to show a SnackBar.
+
+          },
+          child: img3,
+        ),
       ),
       Container(
-        padding: const EdgeInsets.all(8),
-        color: Colors.teal[300],
-        child: img2,
+        child: ElevatedButton(
+          onPressed: () {
+            final snackBar = SnackBar(
+              content: const Text('派欸'),
+              action: SnackBarAction(
+                label: 'Undo',
+                onPressed: () {
+                  Text('派欸');
+                  // Some code to undo the change.
+                },
+              ),
+            );
+
+            // Find the ScaffoldMessenger in the widget tree
+            // and use it to show a SnackBar.
+
+          },
+          child: img2,
+        ),
       ),
       Container(
-        padding: const EdgeInsets.all(8),
-        color: Colors.brown,
-        child: img4,
+        child: ElevatedButton(
+          onPressed: () {
+            final snackBar = SnackBar(
+              content: const Text('派欸'),
+              action: SnackBarAction(
+                label: 'Undo',
+                onPressed: () {
+                  Text('派欸');
+                  // Some code to undo the change.
+                },
+              ),
+            );
+
+            // Find the ScaffoldMessenger in the widget tree
+            // and use it to show a SnackBar.
+
+          },
+          child: img4,
+        ),
       ),
       Container(
-        padding: const EdgeInsets.all(8),
-        color: Colors.purpleAccent,
-        child: img5,
+        child: ElevatedButton(
+          onPressed: () {
+            final snackBar = SnackBar(
+              content: const Text('派欸'),
+              action: SnackBarAction(
+                label: 'Undo',
+                onPressed: () {
+                  Text('派欸');
+                  // Some code to undo the change.
+                },
+              ),
+            );
+
+            // Find the ScaffoldMessenger in the widget tree
+            // and use it to show a SnackBar.
+
+          },
+          child: img5,
+        ),
       ),
       Container(
-        padding: const EdgeInsets.all(8),
-        color: Colors.greenAccent,
-        child: img6,
+        child: ElevatedButton(
+          onPressed: () {
+            final snackBar = SnackBar(
+              content: const Text('派欸'),
+              action: SnackBarAction(
+                label: 'Undo',
+                onPressed: () {
+                  Text('派欸');
+                  // Some code to undo the change.
+                },
+              ),
+            );
+
+            // Find the ScaffoldMessenger in the widget tree
+            // and use it to show a SnackBar.
+
+          },
+          child: img6,
+        ),
       ),
     ],
   );
@@ -72,6 +169,8 @@ void main() {
 
   runApp(app);
 }
+
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
